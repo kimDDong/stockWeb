@@ -1,186 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <!-- <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> -->
     <script defer type="text/javascript" src="a.js"></script>
-    <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
-    <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+    <!-- <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"> -->
     <link defer rel="stylesheet" href="a.css">
     <meta charset="utf-8">
     <title>stockWeb</title>
   </head>
     <body>
-    <div class="slide-container">
-      <div class="wrapper">
-        <div class="trading-card tmp1">
-          <div class="trading-card__image trading-card__image--tmp1">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tmp1.png" alt="tmp1" />
-            <div id="tmp1button">
-              <button class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </button>
+      <form class="form" onsubmit="return false" autocomplete="off">
+        <div class="form-inner">
+          <h2>User Login</h2>
+          <div class="input-wrapper">
+            <label for="login-Access_Key">Access Key</label>
+            <div class="input-group"><span class="icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
+                </svg></span>
+              <input type="text" id="login-Access_Key" data-lpignore="true"/>
             </div>
           </div>
-          <div class="trading-card__goal trading-card__goal--tmp1">High Risk High Return</div>
-          <div class="trading-card__algorithm-name">기술적 분석 기반 거래</div>
-          <div class="trading-card__algorithm-description">
-            기술적 분석 기반 거래는 기술적 지표(Technical Indicator)나 일정 기간의 정보를 담고 있는 캔들을 분석하여 거래한다. 기술적 분석 기반 전략은 추세 추종 전략(Trend Following Strategy)과 역추세 전략(Counter-Trend Strategy) 두 가지로 구분할 수 있다.
+          <div class="input-wrapper">
+            <label for="login-Secret_Key">Secret Key</label>
+            <div class="input-group"><span class="icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M11.83,1.73C8.43,1.79 6.23,3.32 6.23,3.32C5.95,3.5 5.88,3.91 6.07,4.19C6.27,4.5 6.66,4.55 6.96,4.34C6.96,4.34 11.27,1.15 17.46,4.38C17.75,4.55 18.14,4.45 18.31,4.15C18.5,3.85 18.37,3.47 18.03,3.28C16.36,2.4 14.78,1.96 13.36,1.8C12.83,1.74 12.32,1.72 11.83,1.73M12.22,4.34C6.26,4.26 3.41,9.05 3.41,9.05C3.22,9.34 3.3,9.72 3.58,9.91C3.87,10.1 4.26,10 4.5,9.68C4.5,9.68 6.92,5.5 12.2,5.59C17.5,5.66 19.82,9.65 19.82,9.65C20,9.94 20.38,10.04 20.68,9.87C21,9.69 21.07,9.31 20.9,9C20.9,9 18.15,4.42 12.22,4.34M11.5,6.82C9.82,6.94 8.21,7.55 7,8.56C4.62,10.53 3.1,14.14 4.77,19C4.88,19.33 5.24,19.5 5.57,19.39C5.89,19.28 6.07,18.92 5.95,18.6V18.6C4.41,14.13 5.78,11.2 7.8,9.5C9.77,7.89 13.25,7.5 15.84,9.1C17.11,9.9 18.1,11.28 18.6,12.64C19.11,14 19.08,15.32 18.67,15.94C18.25,16.59 17.4,16.83 16.65,16.64C15.9,16.45 15.29,15.91 15.26,14.77C15.23,13.06 13.89,12 12.5,11.84C11.16,11.68 9.61,12.4 9.21,14C8.45,16.92 10.36,21.07 14.78,22.45C15.11,22.55 15.46,22.37 15.57,22.04C15.67,21.71 15.5,21.35 15.15,21.25C11.32,20.06 9.87,16.43 10.42,14.29C10.66,13.33 11.5,13 12.38,13.08C13.25,13.18 14,13.7 14,14.79C14.05,16.43 15.12,17.54 16.34,17.85C17.56,18.16 18.97,17.77 19.72,16.62C20.5,15.45 20.37,13.8 19.78,12.21C19.18,10.61 18.07,9.03 16.5,8.04C14.96,7.08 13.19,6.7 11.5,6.82M11.86,9.25V9.26C10.08,9.32 8.3,10.24 7.28,12.18C5.96,14.67 6.56,17.21 7.44,19.04C8.33,20.88 9.54,22.1 9.54,22.1C9.78,22.35 10.17,22.35 10.42,22.11C10.67,21.87 10.67,21.5 10.43,21.23C10.43,21.23 9.36,20.13 8.57,18.5C7.78,16.87 7.3,14.81 8.38,12.77C9.5,10.67 11.5,10.16 13.26,10.67C15.04,11.19 16.53,12.74 16.5,15.03C16.46,15.38 16.71,15.68 17.06,15.7C17.4,15.73 17.7,15.47 17.73,15.06C17.79,12.2 15.87,10.13 13.61,9.47C13.04,9.31 12.45,9.23 11.86,9.25M12.08,14.25C11.73,14.26 11.46,14.55 11.47,14.89C11.47,14.89 11.5,16.37 12.31,17.8C13.15,19.23 14.93,20.59 18.03,20.3C18.37,20.28 18.64,20 18.62,19.64C18.6,19.29 18.3,19.03 17.91,19.06C15.19,19.31 14.04,18.28 13.39,17.17C12.74,16.07 12.72,14.88 12.72,14.88C12.72,14.53 12.44,14.25 12.08,14.25Z"></path>
+                </svg></span>
+              <input type="Secret_Key" id="login-Secret_Key" data-lpignore="true"/>
+            </div>
           </div>
-
-          <div class="trading-card__algorithm-stats trading-card__algorithm-stats--tmp1 clearfix">
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RISK</div>
-            </div>
-
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RETURN</div>
-            </div>
-
-            <div class="one-third no-border">
-              <div class="stat">40</div>
-              <div class="stat-value">WIN</div>
-            </div>
-
+          <div class="btn-group">
+            <button class="btn btn--primary">Sign in</button>
           </div>
-
-        </div> <!-- end trading-card tmp1-->
-      </div> <!-- end wrapper -->
-
-      <div class="wrapper">
-        <div class="trading-card tmp2">
-          <div class="trading-card__image trading-card__image--tmp2">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tmp2.png" alt="tmp2" />
-          </div>
-          <div class="trading-card__goal trading-card__goal--tmp2">High Risk High Return</div>
-          <div class="trading-card__algorithm-name">추세 추종 전략</div>
-          <div class="trading-card__algorithm-description">
-            추세 추종 전략(Trend Following Strategies)은 특별히 추세 예측을 하지 않고 중장기적으로 형성된 추세가 앞으로도 유지될거라 판단하고, 그 추세의 방향과 같은 방향에 포지션을 구축하는 전략이다. 추세 추종 전략에서는 이동평균선, MACD, RSI(Relative Strength Index)와 같은 기술적 지표를 이용한다. 대표적인 추세 추종 전략으로는 이동평균선 교차 전략이 있다.
-          </div>
-
-          <div class="trading-card__algorithm-stats trading-card__algorithm-stats--tmp2 clearfix">
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RISK</div>
-            </div>
-
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RETURN</div>
-            </div>
-
-            <div class="one-third no-border">
-              <div class="stat">40</div>
-              <div class="stat-value">WIN</div>
-            </div>
-
-          </div>
-
-        </div> <!-- end trading-card tmp2-->
-      </div> <!-- end wrapper -->
-
-      <div class="wrapper">
-        <div class="trading-card tmp3">
-          <div class="trading-card__image trading-card__image--tmp3">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tmp3.png" alt="tmp3" />
-          </div>
-          <div class="trading-card__goal trading-card__goal--tmp3">High Risk High Return</div>
-          <div class="trading-card__algorithm-name">역추세 전략</div>
-          <div class="trading-card__algorithm-description">
-            역추세 전략은 단기적 혹은 중기적으로 추세와는 반대로 가격이 움직일거라 판단하고, 지금까지의 추세의 방향과는 반대 방향에 포지션을 구축하는 전략이다. 역추세 전략은 일정 기간 동안 주가가 형성한 스프레드를 보고 시장의 과열이나 침체를 판단한다. 여기서 일정 기간은 대체로 짧은 기간이며 거래 방식은 스캘핑이 대다수를 차지한다. 역추세 전략에서는 캔들에 내포된 저가나 고가를 이용하기도 하고 RSI 같은 기술적 지표를 이용하기도 한다.
-          </div>
-
-          <div class="trading-card__algorithm-stats trading-card__algorithm-stats--tmp3 clearfix">
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RISK</div>
-            </div>
-
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RETURN</div>
-            </div>
-
-            <div class="one-third no-border">
-              <div class="stat">40</div>
-              <div class="stat-value">WIN</div>
-            </div>
-
-          </div>
-
-        </div> <!-- end trading-card tmp3-->
-      </div> <!-- end wrapper -->
-
-       <div class="wrapper">
-        <div class="trading-card tmp4">
-          <div class="trading-card__image trading-card__image--tmp4">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tmp4.png" alt="tmp4" />
-          </div>
-          <div class="trading-card__goal trading-card__goal--tmp4">High Risk High Return</div>
-          <div class="trading-card__algorithm-name">차익거래</div>
-          <div class="trading-card__algorithm-description">
-            차익거래는 두 개의 시장에서 가치가 다른 동일한 물건이 있을 때 싼 곳에서 구매하고 비싼 곳에서 파는 방식으로 무위험 이익을 내는 것을 말한다. 일물일가의 법칙이 깨진 틈을 사용해서 무위험으로 추가이익을 내는 것이다. 일반적으로 알고리즘 트레이딩을 이용해 차익거래와 비차익거래를 하는 것을 프로그램 매매라고 부른다.
-          </div>
-
-          <div class="trading-card__algorithm-stats trading-card__algorithm-stats--tmp4 clearfix">
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RISK</div>
-            </div>
-
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RETURN</div>
-            </div>
-
-            <div class="one-third no-border">
-              <div class="stat">40</div>
-              <div class="stat-value">WIN</div>
-            </div>
-
-          </div>
-
-        </div> <!-- end trading-card tmp4-->
-      </div> <!-- end wrapper -->
-
-      <div class="wrapper">
-        <div class="trading-card tmp5">
-          <div class="trading-card__image trading-card__image--tmp5">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tmp5.png" alt="tmp5" />
-          </div>
-          <div class="trading-card__goal trading-card__goal--tmp5">High Risk High Return</div>
-          <div class="trading-card__algorithm-name">통계적 차익거래</div>
-          <div class="trading-card__algorithm-description">
-            통계적 차익거래는 두 시장 혹은 두 종목 간의 가격인 스프레드를 차이를 통계적으로 분석해 통계적으로 유의미한 스프레드를 벗어났을 때 스프레드가 다시 정상 범위로 돌아오는 것을 이용하여 포지션을 구축하는 전략이다. 통계적 차익거래는 페어 트레이딩에 속한다.
-          </div>
-
-          <div class="trading-card__algorithm-stats trading-card__algorithm-stats--tmp5 clearfix">
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RISK</div>
-            </div>
-
-            <div class="one-third">
-              <div class="stat">80</div>
-              <div class="stat-value">RETURN</div>
-            </div>
-
-            <div class="one-third no-border">
-              <div class="stat">40</div>
-              <div class="stat-value">WIN</div>
-            </div>
-
-          </div>
-
-        </div> <!-- end trading-card tmp5-->
-      </div> <!-- end wrapper -->
-
-    </div> <!-- end container -->
+        </div>
+      </form>
   </body>
 </html>
 
